@@ -16,11 +16,11 @@
   2.4 [Предположения и зависимости](#assumptions_and_dependencies)<br>
 3 [Системные требования](#system_requirements)<br> 
   3.1 [Функциональные требования](#functional_requirements)<br>   
-  3.2 [Нефункциональные требования](#non-functional_requirements)<br>   
-    3.2.1 [Атрибуты качества](#quality_attributes)<br> 
+  3.2 [Нефункциональные требования](#non-functional_requirements)<br>
+    3.2.1 [Атрибуты качества](#quality_attributes)<br>
       3.2.1.1 [Требования к удобству использования](#requirements_for_ease_of_use)<br>
       3.2.1.2 [Требования к безопасности](#security_requirements)<br>
-    3.2.3 [Ограничения](#restrictions)<br> 
+    3.2.3 [Ограничения](#restrictions)<br>
 
 ### Глоссарий
 * Аудиофайл - файл, который находится на компьютере пользователя, например, ".mp3", ".wav" и т.д.
