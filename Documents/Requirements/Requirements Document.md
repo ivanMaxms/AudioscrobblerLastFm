@@ -15,7 +15,7 @@
     2.3.1 [Классы пользователей](#user_classes)<br>
   2.4 [Предположения и зависимости](#assumptions_and_dependencies)<br>
 3 [Системные требования](#system_requirements)<br> 
-  3.1 [Функциональные требования](#functional_requirements)<br>   
+  3.1 [Функциональные требования](#functional_requirements)<br>
   3.2 [Нефункциональные требования](#non-functional_requirements)<br>
     3.2.1 [Атрибуты качества](#quality_attributes)<br>
       3.2.1.1 [Требования к удобству использования](#requirements_for_ease_of_use)<br>
