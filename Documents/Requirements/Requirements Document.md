@@ -75,7 +75,7 @@
 <a name="user_interface"/>
 
 ## 2.2 Интерфейс пользователя
-Главное окно приложения.  
-![Окно входа в приложение](../../Images/Mockups/MainWindow.jpg)  
+Окно входа в приложение.  
+![Окно входа в приложение](../../images/mockups/MainWindow.jpg)  
 Окно авторизации на сайте.  
-![Окно регистрации нового пользователя](../../Images/Mockups/LoginWindow.PNG)  
+![Окно авторизации на сайте](../../images/mockups/LoginWindow.jpg)  
