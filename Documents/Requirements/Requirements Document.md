@@ -9,7 +9,7 @@
     1.2.2 [Границы проекта](#project_boundary)<br>
   1.3 [Аналоги](#analogues)<br>
 2 [Требования пользователя](#user_requirements)<br>  
-  2.1 [Программные интерфейсы](#software_interfaces)<br> 
+2.1 [Программные интерфейсы](#software_interfaces)<br> 
   2.2 [Интерфейс пользователя](#user_interface)<br> 
   2.3 [Характеристики пользователей](#user_specifications)<br> 
     2.3.1 [Классы пользователей](#user_classes)<br>  
