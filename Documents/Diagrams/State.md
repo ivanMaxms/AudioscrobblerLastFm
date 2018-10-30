@@ -18,5 +18,5 @@
 ![Изменение громкости](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/VolumeChaging.jpg)
 
 ### 5. Авторизация на Last.fm<a name="5"></a>
-![Авторизация на Last.fm]()
+![Авторизация на Last.fm](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/Authorization.jpg)
 
