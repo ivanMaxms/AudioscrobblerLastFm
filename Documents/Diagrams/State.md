@@ -12,7 +12,7 @@
 ![Начало воспроизведения](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/startPlaying.jpg)
   
 ### 3. Воспроизведение следующей аудиозаписи<a name="3"></a>
-![Воспроизведение следующей аудиозаписи]()
+![Воспроизведение следующей аудиозаписи](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/Skipping.jpg)
 
 ### 4. Изменение громкости<a name="4"></a>
 ![Изменение громкости]()
