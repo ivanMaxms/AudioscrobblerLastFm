@@ -9,7 +9,7 @@
 ![Добавление аудиофайла](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/addFile.jpg)
 
 ### 2. Начало воспроизведения<a name="2"></a>
-![Начало воспроизведения]()
+![Начало воспроизведения](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/startPlaying.jpg)
   
 ### 3. Воспроизведение следующей аудиозаписи<a name="3"></a>
 ![Воспроизведение следующей аудиозаписи]()
