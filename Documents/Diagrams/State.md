@@ -6,7 +6,7 @@
 5. [Авторизация на Last.fm](#5)
 
 ### 1. Добавление аудиофайла<a name="1"></a>
-![Добавление аудиофайла]()
+![Добавление аудиофайла](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/addFile.jpg)
 
 ### 2. Начало воспроизведения<a name="2"></a>
 ![Начало воспроизведения]()
