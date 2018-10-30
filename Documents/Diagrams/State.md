@@ -15,7 +15,7 @@
 ![Воспроизведение следующей аудиозаписи](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/Skipping.jpg)
 
 ### 4. Изменение громкости<a name="4"></a>
-![Изменение громкости]()
+![Изменение громкости](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/images/diagrams/State/VolumeChaging.jpg)
 
 ### 5. Авторизация на Last.fm<a name="5"></a>
 ![Авторизация на Last.fm]()
