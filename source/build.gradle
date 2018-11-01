@@ -1,0 +1,40 @@
+import org.gradle.jvm.tasks.Jar
+
+group 'com.andreev.course2'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName =  'MainFrame'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+jar {
+    manifest {
+        attributes "Main-Class": "MainFrame"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'de.u-mass:lastfm-java:0.1.2'
+    compile 'org.apache.httpcomponents:httpclient:4.5.5'
+    compile 'com.mpatric:mp3agic:0.9.1'
+
+
+}
+
