@@ -5,6 +5,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -13,10 +16,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javafx.scene.image.WritableImage;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 
 class FileParser{
     private Mp3File mp3file;

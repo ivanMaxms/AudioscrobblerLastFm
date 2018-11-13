@@ -53,6 +53,8 @@ public class MainFrame extends Application {
 
     Scene scene;
 
+    int numberOfTracks;
+
     Button playPauseButton;
     Button jumpBackButton;
     Button jumpForwardButton;
@@ -371,9 +373,9 @@ public class MainFrame extends Application {
 
                 if (click.getClickCount() == 2) {
 
-                    if(currentAudio != null){
+                    if (currentAudio != null){
                         currentAudio.stop();
-                        if(scrobbling != null) {
+                        if (scrobbling != null) {
                             scrobbling.endPlaying();
                         }
                     }
@@ -381,7 +383,7 @@ public class MainFrame extends Application {
                     audioTable.getItems().get(audioTable.getSelectionModel().getSelectedIndex()).getAudioFileToPlay().play();
                     playPauseButton.setGraphic(pauseImage);
                     currentAudio = audioTable.getItems().get(audioTable.getSelectionModel().getSelectedIndex()).getAudioFileToPlay();
-                    if(scrobbling != null)
+                    if (scrobbling != null)
                         scrobbling.setNowPlayingAudio(audioTable.getItems().get(audioTable.getSelectionModel().getSelectedIndex()).getArtist(),
                             audioTable.getItems().get(audioTable.getSelectionModel().getSelectedIndex()).getTitle());
                     currentAudio.currentTimeProperty().addListener(new InvalidationListener() {
@@ -397,7 +399,7 @@ public class MainFrame extends Application {
 
         playPauseButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if(currentAudio == null){
+                if (currentAudio == null){
                     return;
                 }
 
@@ -422,12 +424,12 @@ public class MainFrame extends Application {
 
         stopButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if(currentAudio == null){
+                if (currentAudio == null){
                     return;
                 }
                 currentAudio.stop();
                 playPauseButton.setGraphic(playImage);
-                if(scrobbling != null)
+                if (scrobbling != null)
                     scrobbling.endPlaying();
             }
         });
@@ -435,7 +437,7 @@ public class MainFrame extends Application {
 
         seekBackwardButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if(currentAudio == null){
+                if (currentAudio == null){
                     return;
                 }
                 currentAudio.seek(currentAudio.getCurrentTime().divide(1.2));
@@ -444,7 +446,7 @@ public class MainFrame extends Application {
 
         seekForwardButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if(currentAudio == null){
+                if (currentAudio == null){
                     return;
                 }
                 currentAudio.seek(currentAudio.getCurrentTime().multiply(1.2));
@@ -458,7 +460,7 @@ public class MainFrame extends Application {
             @Override
             public void invalidated(Observable ov) {
                 // TODO Auto-generated method stub
-                if(time.getValue() > time.getMax()*0.99) {
+                if (time.getValue() > time.getMax()*0.99) {
 
                     /*if(audioFiles.audioToPlay.get(audioFiles.audioToPlay.size()).equals(currentAudio)){
                         audioFiles.audioToPlay.get(audioFiles.getNowPlayingInd()).stop();
@@ -498,19 +500,19 @@ public class MainFrame extends Application {
 
         jumpBackButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if((currentAudio == null) || (audioTable.getItems().get(0).getAudioFileToPlay().equals(currentAudio))){
+                if ((currentAudio == null) || (audioTable.getItems().get(0).getAudioFileToPlay().equals(currentAudio))){
                     return;
                 }
 
                 currentAudio.stop();
-                if(scrobbling != null)
+                if (scrobbling != null)
                     scrobbling.endPlaying();
 
                 audioTable.getItems().get(audioFiles.getNowPlayingInd() - 1).getAudioFileToPlay().play();
                 audioTable.getSelectionModel().selectPrevious();
                 playPauseButton.setGraphic(pauseImage);
                 currentAudio = audioTable.getItems().get(audioFiles.getNowPlayingInd() - 1).getAudioFileToPlay();
-                if(scrobbling != null) {
+                if (scrobbling != null) {
                     scrobbling.setNowPlayingAudio(audioTable.getItems().get(audioFiles.getNowPlayingInd() - 1).getArtist(),
                             audioTable.getItems().get(audioFiles.getNowPlayingInd() - 1).getTitle());
                 }
@@ -526,17 +528,17 @@ public class MainFrame extends Application {
 
         jumpForwardButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
-                if((currentAudio == null) || (audioTable.getItems().get(audioFiles.audioList.size()-1).getAudioFileToPlay().equals(currentAudio))){
+                if ((currentAudio == null) || (audioTable.getItems().get(audioFiles.audioList.size()-1).getAudioFileToPlay().equals(currentAudio))){
                     return;
                 }
                 currentAudio.stop();
-                if(scrobbling != null)
+                if (scrobbling != null)
                     scrobbling.endPlaying();
                 audioTable.getItems().get(audioFiles.getNowPlayingInd() + 1).getAudioFileToPlay().play();
                 audioTable.getSelectionModel().selectNext();
                 playPauseButton.setGraphic(pauseImage);
                 currentAudio = audioTable.getItems().get(audioFiles.getNowPlayingInd() + 1).getAudioFileToPlay();
-                if(scrobbling != null){
+                if (scrobbling != null){
                     scrobbling.setNowPlayingAudio(audioTable.getItems().get(audioFiles.getNowPlayingInd()+1).getArtist(),
                             audioTable.getItems().get(audioFiles.getNowPlayingInd()+1).getTitle());
                 }
@@ -556,10 +558,10 @@ public class MainFrame extends Application {
         replayButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
                 currentAudio.stop();
-                if(scrobbling != null)
+                if (scrobbling != null)
                     scrobbling.endPlaying();
                 currentAudio.play();
-                if(scrobbling != null){
+                if (scrobbling != null){
                     scrobbling.setNowPlayingAudio(audioTable.getItems().get(audioFiles.getNowPlayingInd()).getArtist(),
                             audioTable.getItems().get(audioFiles.getNowPlayingInd()).getTitle());
                 }
@@ -571,8 +573,9 @@ public class MainFrame extends Application {
             public void handle(ActionEvent e) {
                 Collections.shuffle(audioTable.getItems());
                 int nowPlayingInd = 0;
-                for(int i = 0; i < audioFiles.audioList.size(); i++){
-                    if(audioTable.getItems().get(i).getAudioFileToPlay().equals(currentAudio))
+                numberOfTracks = audioFiles.audioList.size();
+                for (int i = 0; i < numberOfTracks; i++){
+                    if (audioTable.getItems().get(i).getAudioFileToPlay().equals(currentAudio))
                         nowPlayingInd = i;
 
                 }
@@ -621,9 +624,9 @@ public class MainFrame extends Application {
 
                 okButton.setOnAction(new EventHandler<ActionEvent>() {
                     @Override public void handle(ActionEvent e) {
-                        if(scrobbling.token != null){
+                        if (scrobbling.token != null){
                             scrobbling.session = Authenticator.getSession(scrobbling.token, scrobbling.apiKey, scrobbling.apiSecret);
-                            if(currentAudio != null) {
+                            if (currentAudio != null) {
                                 scrobbling.setNowPlayingAudio(audioTable.getItems().get(audioFiles.getNowPlayingInd()).getArtist(),
                                         audioTable.getItems().get(audioFiles.getNowPlayingInd()).getTitle());
                             }
@@ -690,7 +693,7 @@ public class MainFrame extends Application {
 
 
 
-        for(int i = audioFiles.audioList.size() - audioFiles.successfulImported; i < audioFiles.audioList.size(); i++){
+        for (int i = audioFiles.audioList.size() - audioFiles.successfulImported; i < audioFiles.audioList.size(); i++){
             newAudios.add(new AudioTable(audioFiles.audioList.get(i).getArtist(), audioFiles.audioList.get(i).getTitle(),
                     String.valueOf(Integer.valueOf(audioFiles.audioList.get(i).getDuration())/60) + ":"
                             + String.valueOf(Integer.valueOf(audioFiles.audioList.get(i).getDuration())%60),
