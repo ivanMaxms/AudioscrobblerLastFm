@@ -5,3 +5,5 @@
 
 ### Требования: ([Открыть](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/Documents/Requirements/Requirements%20Document.md))
 ### UML диаграммы: ([Открыть](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/Documents/Diagrams/Readme.md))
+### Test Plan: ([Ru](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/Testing/TestPlan.md))
+### Test Results: ([Ru](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/Testing/TestResults.md))
