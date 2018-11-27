@@ -19,7 +19,7 @@
 
 <a name="1"></a>
 ### 1. Введение
-
+  Содержание данного документа описывает план тестирования разрабатываемого приложения "MXMS-player". Более подробную информацию о приложении можно найти в документе [Requirements Document.md](https://github.com/vanosss/AudioscrobblerLastFm/blob/master/Documents/Requirements/Requirements%20Document.md). Цель проведения тестирования - проверка приложения в соответствии с SRS.
 
 <a name="2"></a>
 ### 2. Объект тестирования
